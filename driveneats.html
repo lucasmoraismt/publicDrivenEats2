@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabriel Hoelzle - Driven Eats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+
+    <main style="width: 414px; background-color: red; height: 1026px; margin: auto;">
+
+        <header style="box-shadow: 0px 4px 3px #747272; width: 414px; height: 92px; position: fixed; top: 0; background-color:#CF2B2B; z-index: 5;">
+            
+            <p class="titulo">Driven Eats</p>
+            <p class="subtitulo">Sua comida em 6 minutos</p>
+
+        </header>
+
+        <section style="margin-top: 92px; margin-bottom: 92px; width: 414px; height: 100%; background-color: white;">
+
+          <p style="padding-top: 17px;" class="topics">Primeiro, seu prato</p>
+
+          <p style="padding-top: 325px;" class="topics">Agora, sua bebida</p>
+
+          <p style="padding-top: 625px;" class="topics">Por fim, sua sobremesa</p>
+
+          <section data-identifier="dishes" style="top: 105px;" class="foods">
+
+            <div data-identifier="food-option" class="dish"> 
+              <img src="Pratos/churrasquinho de rato.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Churrasco de Rato</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Ratinho na brasa</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 14,90</p>
+              <button id="f1" onclick="sprato(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+            <div data-identifier="food-option" class="dish"> 
+              <img src="Pratos/sushi de escorpiao.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Sushi de Escorpião</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Sushi e Sashimi</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 25,50</p>
+              <button id="f2" onclick="sprato(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+            
+            <div data-identifier="food-option" class="dish">
+              <img src="Pratos/sanduiche de miojo.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Sanduiche de Miojo</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Macarrão no Pão</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 900,00</p>
+              <button id="f3" onclick="sprato(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+
+          </section>
+
+          <section data-identifier="drinks" style="top: 200px;" class="foods">
+
+            <div data-identifier="food-option" class="dish">
+              <img src="Pratos/boa noite.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Boa Noite</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Vodka e Calmante</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 0,05</p>
+              <button id="d1" onclick="sbebida(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+            <div data-identifier="food-option" class="dish"> 
+              <img src="Pratos/coca alho.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Coca Alho</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Coca Sabor Alho</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 6,50</p>
+              <button id="d2" onclick="sbebida(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+            <div data-identifier="food-option" class="dish"> 
+              <img src="Pratos/agua mineral.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Agua Mineral</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Agua de Fonte</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 2,00</p>
+              <button id="d3" onclick="sbebida(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+          
+          </section>
+
+          <section data-identifier="desserts" style="top: 285px;" class="foods">
+
+            <div data-identifier="food-option" class="dish">
+              <img src="Pratos/pirulito de bixo.jpg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Pirulito de Bixo</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Recheio Sortido</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 1,00</p>
+              <button id="s1" onclick="ssobremesa(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+            <div data-identifier="food-option" class="dish"> 
+              <img src="Pratos/cerebro.jpeg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Mousse de Cerebro</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">18% carne de verdade</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 20,00</p>
+              <button id="s2" onclick="ssobremesa(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+            <div data-identifier="food-option" class="dish"> 
+              <img src="Pratos/cupcake de mosca.jpeg">
+              <p data-identifier="food-title" style="margin-top: 8px; font-size: 16px; color: #333333; line-height: 16px;"><b>Cupcake de Larva</b></p>
+              <p style="margin-top: 0px; font-size: 15px; color: #A6A6A6; line-height: 15px;">Ainda Vivas</p>
+              <p data-identifier="food-price" style="margin-top: 0px; font-size: 16px; color: #000000; line-height: 16px;">R$ 5,00</p>
+              <button id="s3" onclick="ssobremesa(this)" class="dishbutton">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </button>
+            </div>
+
+          </section>
+
+            
+
+        </section>
+        
+
+    
+        <footer style="width: 414px; height: 92px; position: fixed; bottom: 0; background-color:white;">
+
+          <div class="buybutton">
+
+            <div style="width: 200px; margin-left: 75px; margin-top: 5px;">
+
+              Selecione os 3 itens para fechar o pedido
+
+            </div>
+
+            <button id="buyb" onclick="finaliza()" class="buybuttona">
+              Fechar Pedido
+            </button>
+              
+          </div>
+          
+
+        </footer>
+
+        <div id="tf" class="telafinal hide">
+          <div>
+            <p style="color: white;">Confirme seu pedido</p>
+            <p style="color: white; margin-top: 20px; margin-left: 15px;" id="tf1">asdasdasd</p>
+            <p style="color: white;" id="tf2"></p>
+            <p style="color: white;" id="tf3"></p>
+            <p style="color: white;" id="tf4"></p>
+            <button id="tfconfirma"style="position: absolute; color: #50D074; height: 52px; width: 326px; border-radius: 100px; border-style: none; bottom: 54px; left: 25px;"> Tudo certo, pode pedir!</button>
+            <button id="tfcancela" style="position: absolute; color: white; background: transparent; bottom: 15px; border-style: none; left: 140px;"> Cancela</button>
+          </div>
+        </div>
+    
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    </div>
+    
+  </body>
+
+</html>
